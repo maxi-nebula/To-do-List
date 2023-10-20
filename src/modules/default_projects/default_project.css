@@ -1,10 +1,37 @@
 /** @format */
 
-.default_container {
+/*
+#B7C4CF
+#EEE3CB
+#D7C0AE
+#967E76*/
+@font-face {
+  font-family: "cafe";
+  src: url(../fonts/Louis\ George\ Cafe\ Italic.ttf);
+  font-family: "cafe_bold";
+  src: url(../fonts/Louis\ George\ Cafe\ Bold\ Italic.ttf);
+}
+
+.main_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.default_header {
+  background-color: #eee3cb;
+  font-family: "cafe_bold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.default_folder {
   display: grid;
-  background-color: blueviolet;
-  grid-template-rows: 50px 200px;
-  width: 300px;
+  background-color: #d7c0ae;
+  grid-template-rows: 1fr 4fr;
+  width: 400px;
+  height: 400px;
+  overflow: auto;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
