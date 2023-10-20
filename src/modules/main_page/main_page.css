@@ -1,0 +1,31 @@
+/** @format */
+@font-face {
+  font-family: "cafe";
+  src: url(../fonts/Louis\ George\ Cafe\ Italic.ttf);
+  font-family: "cafe_bold";
+  src: url(../fonts/Louis\ George\ Cafe\ Bold\ Italic.ttf);
+}
+/*
+#F9F5F6
+#F8E8EE
+#FDCEDF
+#F2BED1*/
+
+/*
+#B7C4CF
+#EEE3CB
+#D7C0AE
+#967E76*/
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+.main_header {
+  background-color: #b7c4cf;
+  font-family: "cafe_bold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
