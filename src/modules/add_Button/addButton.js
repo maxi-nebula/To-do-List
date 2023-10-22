@@ -1,12 +1,19 @@
 /** @format */
 import "../add_Button/addButton.css";
 
-function createAddButton() {
+import showModal from "../add_Button/showModal";
+
+function createAddButton(btnText) {
+  const dfooter = document.getElementById("dFooter");
+
   const addBtn = document.createElement("button");
   addBtn.classList.add("add_button");
-  addBtn.innerText = "+";
-  const dfolder = document.getElementById("dfolder");
-  dfolder.appendChild(addBtn);
+  addBtn.innerText = `${btnText}`;
+
+  dfooter.appendChild(addBtn);
+  addBtn.addEventListener("click", () => {
+    showModal();
+  });
 }
 
 export default createAddButton;

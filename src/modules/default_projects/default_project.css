@@ -17,6 +17,18 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.default_folder {
+  display: grid;
+
+  grid-template-rows: 1fr 4fr;
+
+  width: 400px;
+  height: 400px;
+  overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .default_header {
   background-color: #eee3cb;
   font-family: "cafe_bold";
@@ -24,14 +36,13 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  /* height: 40px;*/
 }
-.default_folder {
-  display: grid;
-  background-color: #d7c0ae;
-  grid-template-rows: 1fr 4fr;
-  width: 400px;
-  height: 400px;
-  overflow: auto;
 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.default_footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #d7c0ae;
+  padding: 5px;
 }

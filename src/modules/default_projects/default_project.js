@@ -8,8 +8,11 @@ function defaultFolder() {
   mainContainer.classList.add("main_container");
   const defaultFolder = document.createElement("div");
   const defaultHeader = document.createElement("div");
+  const defaultFooter = document.createElement("div");
   defaultHeader.innerText = "Everything";
   defaultHeader.classList.add("default_header");
+  defaultFooter.id = "dFooter";
+  defaultFooter.classList = "default_footer";
   defaultFolder.id = "dfolder";
   defaultFolder.classList.add("default_folder");
 
@@ -17,8 +20,9 @@ function defaultFolder() {
   container.appendChild(mainContainer);
 
   defaultFolder.appendChild(defaultHeader);
+  defaultFolder.appendChild(defaultFooter);
   mainContainer.appendChild(defaultFolder);
-  createAddButton();
+  createAddButton("+");
 }
 
 export default defaultFolder;

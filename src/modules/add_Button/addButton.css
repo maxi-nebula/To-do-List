@@ -2,8 +2,10 @@
 
 .add_button {
   background-color: #eee3cb;
-  width: 50px;
+  width: 60px;
   height: 30px;
   border: none;
-  border-radius: 50%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
