@@ -8,7 +8,12 @@ function createModal() {
   const taskModal = document.createElement("div");
   taskModal.id = "tModal";
   taskModal.classList.add("task_modal");
-  const taskContent = createElement("div", "mcontent", "modal_content", "");
+  const taskContent = createElement(
+    "div",
+    "mcontent",
+    "modal_content",
+    "Add a new task"
+  );
 
   taskModal.appendChild(taskContent);
 
@@ -18,6 +23,7 @@ function createModal() {
 
   const container = document.getElementById("container");
   container.appendChild(taskModal);
+
   addForm();
 
   closeBtn.addEventListener("click", () => {

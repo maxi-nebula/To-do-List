@@ -1,0 +1,47 @@
+/** @format */
+
+@font-face {
+  font-family: "cafe";
+  src: url(../fonts/Louis\ George\ Cafe\ Italic.ttf);
+  font-family: "cafe_bold";
+  src: url(../fonts/Louis\ George\ Cafe\ Bold\ Italic.ttf);
+}
+
+.task_form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  font-family: "cafe";
+}
+
+.task_footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  width: 40%;
+}
+
+.add_btn {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(85, 177, 85);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.add_btn:hover,
+.add_btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

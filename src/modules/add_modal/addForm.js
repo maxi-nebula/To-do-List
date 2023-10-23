@@ -1,11 +1,21 @@
 /** @format */
-
+import "../add_modal/addForm.css";
 import createElement from "../common/createElement";
+import { compareAsc, format } from "date-fns";
+
 function addForm() {
   const labels = ["Title", "Description", "Due on", "Priority"];
   const priorities = ["High", "Medium", "Low"];
 
-  const taskForm = createElement("form", "tform", "task_form", "Add New Task");
+  // const taskForm = createElement("form", "tform", "task_form", "Add New Task");
+
+  const taskFooter = createElement("div", "tfooter", "task_footer", "");
+  const addbtn = createElement("button", "tbtn", "add_btn", `✔`);
+  addbtn.setAttribute("type", "submit");
+
+  const taskForm = document.createElement("form");
+  taskForm.id = "tform";
+  taskForm.classList.add("task_form");
   const labelList = document.createElement("ul");
   const inputList = document.createElement("ul");
   taskForm.appendChild(labelList);
@@ -30,7 +40,7 @@ function addForm() {
   const title = document.createElement("input");
   l1.appendChild(title);
 
-  const description = document.createElement("input");
+  const description = document.createElement("textarea");
   l2.appendChild(description);
   const dueDate = document.createElement("input");
   dueDate.setAttribute("type", "date");
@@ -45,10 +55,13 @@ function addForm() {
     priorityDropDown.appendChild(newPriority);
   });
 
-  //l4.appendChild(description);
+  l4.appendChild(priorityDropDown);
 
   const modalWindow = document.getElementById("mcontent");
+  taskFooter.appendChild(addbtn);
+
   modalWindow.appendChild(taskForm);
+  modalWindow.appendChild(taskFooter);
 }
 
 export default addForm;
