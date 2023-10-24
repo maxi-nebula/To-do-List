@@ -30,7 +30,7 @@
       "patterns": [
         "src"
       ],
-      "extensions": "js,jsx,cjs"
+      "extensions": "js,jsx,cjs,css"
     }
   },
   "dependencies": {

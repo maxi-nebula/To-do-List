@@ -24,7 +24,12 @@ function createModal() {
   const container = document.getElementById("container");
   container.appendChild(taskModal);
 
-  addForm();
+  const form = addForm();
+
+  let formID = document.getElementById("tform");
+  if (formID == null) {
+    modalBox.appendChild(form);
+  }
 
   closeBtn.addEventListener("click", () => {
     closeModal();
@@ -34,5 +39,7 @@ function createModal() {
     taskModal.style.display = "none";
   }
 }
+
+createModal();
 
 export default createModal;
