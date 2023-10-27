@@ -1,9 +1,12 @@
 /** @format */
+let fromStorage = [];
 
-function retrieveData() {
-  let retreivedStorage = localStorage.getItem("tasksAdded");
+function retrieveData(task) {
+  let retrievedFromStorage = localStorage.getItem("addedTasks");
+  //console.log(JSON.parse(retrievedFromStorage));
+  const parsedDate = JSON.parse(retrievedFromStorage);
 
-  return retreivedStorage;
+  return parsedDate;
 }
 
 export default retrieveData;

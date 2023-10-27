@@ -2,16 +2,23 @@
 
 import "../default_projects/default_project.css";
 import createAddButton from "../add_Button/addButton";
-import appendTasks from "../common/appendtasks";
 import createElement from "../common/createElement";
+import retrieveData from "../common/retrieveData";
+const retrievedDataArray = [];
 function defaultFolder() {
   const mainContainer = document.createElement("div");
   mainContainer.classList.add("main_container");
-  const defaultFolder = document.createElement("div");
+  const defaultFolder = createElement("div", "dfolder", "d_folder", "");
+
   const defaultHeader = document.createElement("div");
   const defaultFooter = document.createElement("div");
-  const rData = appendTasks();
-  const addedTasks = createElement("div", "tdiv", "t_div", `${rData}`);
+  defaultFolder.appendChild(defaultHeader);
+  const rData = retrieveData();
+  rData.forEach((data) => {
+    const dataDiv = createElement("div", "taskAdded", "", `${data.title}`);
+    defaultFolder.appendChild(dataDiv);
+  });
+
   defaultHeader.innerText = "Everything";
   defaultHeader.classList.add("default_header");
   defaultFooter.id = "dFooter";
@@ -22,8 +29,6 @@ function defaultFolder() {
   const container = document.getElementById("container");
   container.appendChild(mainContainer);
 
-  defaultFolder.appendChild(defaultHeader);
-  defaultFolder.appendChild(addedTasks);
   defaultFolder.appendChild(defaultFooter);
   mainContainer.appendChild(defaultFolder);
   createAddButton("+");
