@@ -14,7 +14,9 @@ function appendTasks(addedTasks, fID) {
     `${latestTask[0].title}`
   );
 
-  folder.appendChild(latestToBeAppended);
+  // folder.appendChild(latestToBeAppended);
+  const ulList = document.getElementById("taskList");
+  ulList.appendChild(latestToBeAppended);
 }
 
 export default appendTasks;

@@ -3,6 +3,7 @@ import "../add_modal/addForm.css";
 import createElement from "../common/createElement";
 import { compareAsc, format } from "date-fns";
 import storeData from "../common/storage";
+import clearInputs from "../add_modal/clearInputs";
 
 function addForm() {
   const labels = ["Title", "Description", "Due on", "Priority"];
@@ -15,6 +16,7 @@ function addForm() {
   // addbtn.setAttribute("type", "submit");
   tickbtn.addEventListener("click", () => {
     storeData();
+    clearInputs();
   });
 
   const taskForm = document.createElement("form");

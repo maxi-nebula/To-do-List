@@ -24,7 +24,7 @@
   grid-template-rows: 1fr 4fr;
 
   width: 400px;
-  height: 400px;
+  height: 500px;
   overflow: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   /* height: 40px;*/
 }
 
@@ -45,4 +45,10 @@
   align-items: flex-end;
   background-color: #d7c0ae;
   padding: 5px;
+}
+
+.added_task {
+  font-family: "cafe";
+  font-size: 1.4rem;
+  height: 30px;
 }

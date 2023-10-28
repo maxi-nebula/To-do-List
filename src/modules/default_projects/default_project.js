@@ -14,11 +14,12 @@ function defaultFolder() {
   const defaultFooter = document.createElement("div");
   defaultFolder.appendChild(defaultHeader);
   const rData = retrieveData();
+  const tList = createElement("ul", "taskList", "added_task", "");
   rData.forEach((data) => {
-    const dataDiv = createElement("div", "taskAdded", "", `${data.title}`);
-    defaultFolder.appendChild(dataDiv);
+    const dataListItem = createElement("div", "", "", `${data.title}`);
+    tList.appendChild(dataListItem);
   });
-
+  defaultFolder.appendChild(tList);
   defaultHeader.innerText = "Everything";
   defaultHeader.classList.add("default_header");
   defaultFooter.id = "dFooter";
