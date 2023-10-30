@@ -1,0 +1,57 @@
+/** @format */
+
+@font-face {
+  font-family: "cafe";
+  src: url(../fonts/Louis\ George\ Cafe\ Italic.ttf);
+  font-family: "cafe_bold";
+  src: url(../fonts/Louis\ George\ Cafe\ Bold\ Italic.ttf);
+}
+
+.task_images {
+  height: 20px;
+  width: 20px;
+}
+
+.added_task {
+  font-family: "cafe";
+  /*font-size: 1.2rem;*/
+  height: 30px;
+  /*display: flex;
+  justify-content: space-around;
+  align-items: center;*/
+  display: grid;
+  grid-template-columns: 1fr 4fr 3fr 2fr 2fr;
+  gap: 5px;
+}
+
+.task_checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check_box {
+  height: 20px;
+  width: 20px;
+  padding-top: 3px;
+}
+.para_title {
+  font-size: 1rem;
+  font-family: "cafe_bold";
+  width: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_holder {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.task_images:hover,
+.task_images:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
